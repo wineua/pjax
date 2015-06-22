@@ -42,7 +42,7 @@ class PjaxMiddleware {
                     }
 
                     // Set new content for the response
-                    $response->setContent($title . $response_container->html());
+                    $response->setContent($title . $response_container->getNode(0)->ownerDocument->saveHTML($response_container->getNode(0)));
                 }
 
                 // Updating address bar with the last URL in case there were redirects
