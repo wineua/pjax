@@ -22,15 +22,14 @@ class PjaxMiddleware {
         // Only handle non-redirections
         if (!$response->isRedirection()) {
             // Must be a pjax-request
-            if ($request->server->get('HTTP_X_PJAX')) {
-//                return $response;
+            if ($request->pjax()) {
                 $crawler = new Crawler($response->getContent());
 
                 // Filter to title (in order to update the browser title bar)
                 $response_title = $crawler->filter('head > title');
 
                 // Filter to given container
-                $response_container = $crawler->filter($request->server->get('HTTP_X_PJAX_CONTAINER'));
+                $response_container = $crawler->filter($request->header('X-PJAX-CONTAINER'));
 
                 // Container must exist
                 if ($response_container->count() != 0) {
