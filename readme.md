@@ -1,6 +1,6 @@
-## PJAX for Laravel 5.1
+## PJAX for Laravel 5.*
 
-Enable the use of PJAX in Laravel 5.1.
+Enable the use of PJAX in Laravel 5.*.
 
 #### Installation
 
