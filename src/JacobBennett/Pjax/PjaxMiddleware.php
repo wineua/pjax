@@ -23,6 +23,7 @@ class PjaxMiddleware
 
         // Only handle non-redirections and must be a pjax-request
         if (!$response->isRedirection() && $request->pjax()) {
+            $crawler = new Crawler($response->getContent());
 
             // Filter to title (in order to update the browser title bar)
             $response_title = $crawler->filter('head > title');
