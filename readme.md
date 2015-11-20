@@ -20,7 +20,7 @@ Works great with [jquery.pjax.js](https://github.com/defunkt/jquery-pjax).
 
 ### Notes:
 
-Sometimes when using PJAX it will timeout and trigger a standard page reload. This could be do to various factors but one thing you may try is to extend the default timeout for PJAX using this little snippet when you initialize PJAX.
+Sometimes when using PJAX it will timeout and trigger a standard page reload. This could be due to various factors but one thing you may try is to extend the default timeout for PJAX using this little snippet when you initialize PJAX.
 
 ```js
 
