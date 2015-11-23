@@ -16,7 +16,10 @@ This middleware will check, before outputting the http response, for the `X-PJAX
 header in the request. If found, it will crawl the response to return the requested 
 element defined by `X-PJAX-Container`'s header.
 
-Works great with [jquery.pjax.js](https://github.com/defunkt/jquery-pjax).
+
+jQuery PJAX JS is required to use this package [jquery.pjax.js](https://github.com/defunkt/jquery-pjax).
+
+See an example on [Laracasts](https://laracasts.com/lessons/faster-page-loads-with-pjax)
 
 ### Notes:
 
